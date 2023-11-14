@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
-const port = 3000;
+require('dotenv').config();
+const port = process.env.PORT
 
 const error404 = require('./middlewares/error404');
 const morgan = require("./middlewares/morgan");
